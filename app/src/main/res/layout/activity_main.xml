@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ds.MainActivity">
+    <ScrollView android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:cardElevation="3dp"
+                app:cardCornerRadius="25dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/myColor">
+                <ScrollView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <Button
+                            android:background="@drawable/ic_baseline_add_photo_alternate_24"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/button_upload"
+                            android:enabled="true"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF"
+                            android:text="Click on the above icon to add image"
+                            android:layout_marginTop="5dp"/>
+
+                        <ImageView android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/imageIv"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
